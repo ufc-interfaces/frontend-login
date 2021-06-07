@@ -34,7 +34,7 @@
     "format-message": "^6.2.3",
     "format-message-generate-id": "^6.2.3",
     "mdbreact": "^5.0.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }

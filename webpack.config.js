@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const path = require('path')
 
 const DEFAULT_PORT = 3021
+const deps = require('./package.json').dependencies
 
 module.exports = {
   entry: './src/index',
@@ -46,11 +47,12 @@ module.exports = {
       name: 'login',
       filename: 'remoteEntry.js',
       exposes: {
-        './Login': './src/Login'
+        './Login': './src/Login',
       },
       shared: {
-        react: { eager: true, singleton: true, version: '17.0.1' },
-        'react-dom': { eager: true, singleton: true, version: '17.0.1' },
+        ...deps,
+        react: { eager: true, singleton: true, requiredVersion: deps['react'].version },
+        'react-dom': { eager: true, singleton: true, requiredVersion: deps['react-dom'].version },
       },
     }),
     new HtmlWebpackPlugin({

@@ -1,5 +1,4 @@
 import React, { FC, useEffect } from 'react'
-import t from 'format-message'
 import {
   MDBContainer,
   MDBRow,
@@ -33,7 +32,7 @@ const Login: FC = () => {
               </MDBRow>
             </div>
             <MDBCardBody className='mx-4 mt-4'>
-              <MDBInput label={t('Your email')} group type='text' validate />
+              <MDBInput label="Your email" group type='text' validate />
               <MDBInput
                 label='Your password'
                 group
