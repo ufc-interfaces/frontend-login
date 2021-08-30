@@ -50,7 +50,6 @@ module.exports = {
         './Login': './src/Login',
       },
       shared: {
-        ...deps,
         react: { eager: true, singleton: true, requiredVersion: deps['react'].version },
         'react-dom': { eager: true, singleton: true, requiredVersion: deps['react-dom'].version },
       },
